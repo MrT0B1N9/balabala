@@ -348,22 +348,7 @@ class blibli extends curl{
 /**
  * Running
  */
-echo "Checking for Updates...";
-$version = 'V1.6';
-$json_ver = json_decode(file_get_contents('https://econxn.id/setset/blabla.json'));
-echo "\r\r                       ";
-if(isset($json_ver->version)) {
-    if($version != $json_ver->version) {
-        echo "\n".$json_ver->msg."\n\n";
-        die();
-    } else {
-        echo "\n[?] Password :";
-        $password = trim(fgets(STDIN));
-        if($json_ver->hash != md5($password)) {
-            die();
-        }
-    }
-}
+
 
 // style 
 // style 
